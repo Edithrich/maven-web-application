@@ -1,10 +1,9 @@
-node{
-  def mavenHome = tool name: 'maven3.9.6'    
+node{   
   stage('1.clonecode'){
-    git "https://github.com/LandmakTechnology/maven-web-application"
+    git "https://github.com/Edithrich/maven-web-application/maven-web-application"
   }
   stage('2.mavenBuild'){
-    sh "${mavenHome}/bin/mvn package"
+    sh "/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven_3.9.6/bin/mvn package"
   }
   /*
   stage('3.codeQualityAnalysis'){
