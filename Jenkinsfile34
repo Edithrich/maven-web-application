@@ -1,6 +1,6 @@
 node{   
   stage('1.clonecode'){
-    git "https://github.com/Edithrich/maven-web-application/maven-web-application"
+    git "https://github.com/Edithrich/maven-web-application"
   }
   stage('2.mavenBuild'){
     sh "/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven_3.9.6/bin/mvn package"
